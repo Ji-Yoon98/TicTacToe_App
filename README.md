@@ -26,6 +26,7 @@ const [value, setValue] = useState("");
 - value = 변수이름
 - setValue = State를 정하는 함수 setter
 - useState = value, setValue 리턴 / 초기 State 값을 정하는 Hook
+<br/>
 
 4. 순서를 만들어서 O를 추가
 - 첫 번째 시작 = X
@@ -37,6 +38,7 @@ const [squares, setSquares] = useState(Array(9).fill(null));
 const [xIsNext, setXIsNext] = useState(true);
 const status = `Next player: ${xIsNext ? 'X' : 'O'}`;
 ```
+<br/>
 
 5. Board의 handleClick 함수를 이용하여 xIsNext 값을 뒤집는다.
 
@@ -52,6 +54,7 @@ const handleClick = (i) => {
   setXIsNext(current => !current);
 }
 ```
+<br/>
 
 6. 승자 결정하는 함수 만들고 표시하기
 - 경우의 수를 나열해 둔 후 for문으로 한 줄로 같은 줄이 나오는 X or O를 return
@@ -65,10 +68,12 @@ if(winner){
   status = `Next player: ${xIsNext ? 'X' : 'O'}`;
 }
 ```
+<br/>
 
 7. 동작에 대한 기록 저장 (history)
 - State를 App 컴포넌트로 이동
 - Winner 관련 함수도 App 컴포넌트로 이동
+<br/>
 
 8. 과거의 이동 표시(Map)
 - map()함수 이용 history배열에 있는 것들 하나씩 나열하기
